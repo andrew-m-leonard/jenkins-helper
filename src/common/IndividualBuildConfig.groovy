@@ -36,6 +36,7 @@ class IndividualBuildConfig implements Serializable {
     final boolean KEEP_TEST_REPORTDIR
     final String ACTIVE_NODE_TIMEOUT
     final boolean CODEBUILD
+    final String DEVKIT
     final String DOCKER_IMAGE
     final String DOCKER_ARGS
     final String DOCKER_FILE
@@ -110,6 +111,7 @@ class IndividualBuildConfig implements Serializable {
         KEEP_TEST_REPORTDIR = map.get("KEEP_TEST_REPORTDIR")
         ACTIVE_NODE_TIMEOUT = map.get("ACTIVE_NODE_TIMEOUT") != null ? map.get("ACTIVE_NODE_TIMEOUT").trim() : null
         CODEBUILD = map.get("CODEBUILD")
+        DEVKIT = map.get("DEVKIT") != null ? map.get("DEVKIT").trim() : null
         DOCKER_IMAGE = map.get("DOCKER_IMAGE") != null ? map.get("DOCKER_IMAGE").trim() : null
         DOCKER_ARGS = map.get("DOCKER_ARGS") != null ? map.get("DOCKER_ARGS").trim() : null
         DOCKER_FILE = map.get("DOCKER_FILE") != null ? map.get("DOCKER_FILE").trim() : null
@@ -172,6 +174,7 @@ class IndividualBuildConfig implements Serializable {
                 KEEP_TEST_REPORTDIR       : KEEP_TEST_REPORTDIR,
                 ACTIVE_NODE_TIMEOUT       : ACTIVE_NODE_TIMEOUT,
                 CODEBUILD                 : CODEBUILD,
+                DEVKIT                    : DEVKIT,
                 DOCKER_IMAGE              : DOCKER_IMAGE,
                 DOCKER_ARGS               : DOCKER_ARGS,
                 DOCKER_FILE               : DOCKER_FILE,
